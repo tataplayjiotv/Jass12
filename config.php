@@ -1,14 +1,14 @@
 <?php
 
 $apikey = ""; // get your own apiKey from " https://babel-in.xyz "
-$worldwide = "no"; // set yes if u wanna restream else no
-$genreName = "Babel-IN"; // for m3u category
+$worldwide = "yes"; // set yes if u wanna restream else no
+$genreName = "JASS.SAINI"; // for m3u category
 $cacheFolder = "_cache_"; // set cache folder
 $cacheTime = 60; // set cacheTime in secs
 
 $serverAddress = $_SERVER['HTTP_HOST'] ?? 'default.server.address';
 $serverPort = $_SERVER['SERVER_PORT'] ?? '80';
-$serverScheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
+$serverScheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'on' ? 'https' : 'http';
 $requestUri = $_SERVER['REQUEST_URI'] ?? '';
 $serverIP = @file_get_contents('https://api.ipify.org');
 $dirPath = dirname($requestUri);
