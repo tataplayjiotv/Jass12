@@ -33,7 +33,7 @@ if (!$widevinePssh) {
 if ($worldwide === "no") {
     $baseUrl = dirname($dashUrl) . "/dash/";
 } else {
-    $baseUrl = "$serverScheme://$serverAddress"."$dirPath/$id/dash/";
+    $baseUrl = "https://tataplayjiotv.github.io/Jass12/config.php/$id/dash/";
 }
 
 $psshSet = $widevinePssh['pssh']; // get pssh
