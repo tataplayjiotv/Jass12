@@ -17,7 +17,7 @@ foreach ($channelInfo as $entry) {
     // Check if 'initialUrl' exists in 'streamData'
     $mpd = isset($entry['streamData']['initialUrl']) ? $entry['streamData']['initialUrl'] : '';
     $extension = pathinfo($mpd, PATHINFO_EXTENSION);
-    $license_key_url = "$serverScheme://$serverAddress$dirPath/$id.key";
+    $license_key_url = "https://tataplayjiotv.github.io/Jass12/keys.php/$id.key";
 
     // Generate playlist entry
     $inus_data .= '#EXTINF:-1 tvg-id="ts' . $id . '" tvg-logo="' . $logo . '" group-title="' . $genre . '", ' . $name . PHP_EOL;
@@ -31,7 +31,7 @@ foreach ($channelInfo as $entry) {
     if ($extension === 'm3u8' && $mpd !== '') {
         $inus_data .= $mpd . PHP_EOL . PHP_EOL;
     } else {
-        $mpd_url = "$serverScheme://$serverAddress$dirPath/$id.$extension";
+        $mpd_url = "https://tataplayjiotv.github.io/Jass12/mpd.php/$id.$extension";
         if ($mpd_url !== '') {
             $inus_data .= $mpd_url . "|X-Forwarded-For=$userIP" . PHP_EOL . PHP_EOL;
         }
